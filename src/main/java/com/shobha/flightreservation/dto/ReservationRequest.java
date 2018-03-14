@@ -5,10 +5,12 @@ public class ReservationRequest {
 	private Long flightId;
 	private String passengerFirstName;
 	private String passengerLastName;
+	private String passengerMiddleName;
 	private String passengerEmail;
 	private String passengerPhone;
 	private String nameOnTheCard;
 	private String cardNumber;
+
 	private String expirationDate;
 	private String securityCode;
 
@@ -34,6 +36,14 @@ public class ReservationRequest {
 
 	public void setPassengerLastName(String passengerLastName) {
 		this.passengerLastName = passengerLastName;
+	}
+
+	public String getPassengerMiddleName() {
+		return passengerMiddleName;
+	}
+
+	public void setPassengerMiddleName(String passengerMiddleName) {
+		this.passengerMiddleName = passengerMiddleName;
 	}
 
 	public String getPassengerEmail() {
@@ -84,4 +94,13 @@ public class ReservationRequest {
 		this.securityCode = securityCode;
 	}
 
+	@Override
+	public String toString() {
+		return "ReservationRequest [flightId=" + flightId + ", passengerFirstName=" + passengerFirstName
+				+ ", passengerLastName=" + passengerLastName + ", passengerEmail=" + passengerEmail
+				+ ", passengerPhone=" + passengerPhone + ", nameOnTheCard=" + nameOnTheCard + ", cardNumber="
+				+ cardNumber + ", expirationDate=" + expirationDate + ", securityCode=" + securityCode + "]";
+	}
+
 }
+
